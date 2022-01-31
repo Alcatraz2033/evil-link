@@ -19,5 +19,5 @@ chmod +x evil-link.sh
 
 ```
 <p align="center">
-	<img src="https://github.com/Alcatraz2033/evil-link/blob/master/evil-link.png" width="1000px" height="550px">
+	<img src="https://github.com/Alcatraz2033/evil-link/blob/master/evil-link.png" width="1000px" height="500px">
 </p>

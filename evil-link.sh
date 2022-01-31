@@ -40,8 +40,8 @@ banner
 echo ""
 echo -e "${GREEN}Ingrese un url con ${CYAN}https:// o http://${endColour}"
 read -r -p"${CYAN}Link a camuflar:${endColour} " url
-if [ $? == "1" ]; then
-    echo -e "\n${RED}[!] No ha ingresado una url con https...${endColour}"
+if [ ! $url ];then
+    echo -e "\n${RED}[!] No ha ingresado la URL...${endColour}"
     exit 1
 fi 
 

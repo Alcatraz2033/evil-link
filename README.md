@@ -13,7 +13,7 @@ Se le pueden agregar más parametros para hacerlo más creíble, estos bienen se
 ## Evil-link
 
 ### Instalación:
-Instalar dependecias, clonar el repositorio y cambiar los permisos
+Clonar el repositorio y cambiar los permisos
 
 ```markdown
 git clone https://github.com/Alcatraz2033/evil-link.git

@@ -7,12 +7,11 @@ el navegador urnicamente hará la busqueda de todo lo que se encuentre despues d
 Se le pueden agregar más parametros para hacerlo más creíble, estos bienen separados por un caracter en hexadecimal que no afecta la estructura del enlace.
 
 <p align="center">
-	<img src="https://i.imgur.com/Lfp7yKK.png" width="50%" height="50%" align="left">
+	<img src="https://i.imgur.com/Lfp7yKK.png" width="75%" height="75%" align="">
 </p>
 
-## Evil-link
+## Instalación
 
-### Instalación:
 Clonar el repositorio y cambiar los permisos
 
 ```markdown

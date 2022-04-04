@@ -6,7 +6,7 @@ que en cierta forma comenta todo lo que se escriba detras el mismo, de esta mane
 el navegador urnicamente hará la busqueda de todo lo que se encuentre despues del '@' que en este caso es el link acortado.
 Se le pueden agregar más parametros para hacerlo más creíble, estos bienen separados por un caracter en hexadecimal que no afecta la estructura del enlace.
 
-<p align="center">
+<p align="left">
 	<img src="https://i.imgur.com/Lfp7yKK.png" width="75%" height="75%" align="">
 </p>
 

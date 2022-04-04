@@ -36,7 +36,28 @@ function ctrl_c(){
 }
 trap ctrl_c INT
 
+function cheker(){
+
+	which xclip &>/dev/null
+	if [ $? -ne "0" ];then
+		echo -e "\n${CYAN}[+] Instalando xclip...${endColour}"
+		sudo apt install xclip &>/dev/null
+	fi 
+	
+	which html2text &>/dev/null
+	if [ $? -ne "0" ];then
+		echo -e "\n${CYAN}[+] Instalando html2text...${endColour}"
+		sudo apt install html2text $>/dev/null
+	fi
+}
+
+if [ $(id -u) -ne "0" ];then
+	echo -e "\n${RED}[!] Ejecute este script como root${endColour}"
+	exit 1
+fi
+
 banner 
+cheker
 echo ""
 echo -e "${GREEN}Ingrese un url con ${CYAN}https:// o http://${endColour}"
 read -r -p"${CYAN}Link a camuflar:${endColour} " url
@@ -60,8 +81,15 @@ curl -s --data "url=$url&shorturl=&opt=0" https://is.gd/create.php | html2text >
 link=$(cat masbien.tmp | grep "https" | head -n 1 | sed 's/\[//' | sed 's/\]//' | sed 's/https:\/\///')
 
 if [ ! $complemento ];then
-    echo -e "${GREEN}\n[*] Link camuflado:${endColour} $plantilla@$link"
+	complete="$plantilla@$link"
+    echo -e "${GREEN}\n[*] Link camuflado:${endColour} $complete"
+    echo $complete | xclip -sel clip
+    echo -e "${GREEN}[*] Link copiado en la clipboard"
+    
 else
-    echo -e "${GREEN}\n[*] Link camuflado:${endColour} $plantilla%7A$complemento2@$link"
+	complete="$plantilla%7A$complemento2@$link"
+    echo -e "${GREEN}\n[*] Link camuflado:${endColour} $complete"
+    echo $complete | xclip -sel clip
+    echo -e "${GREEN}[*] Link copiado en la clipboard"
 fi
 rm masbien.tmp 

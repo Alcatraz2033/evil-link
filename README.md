@@ -16,11 +16,7 @@ Clonar el repositorio y cambiar los permisos
 
 ```markdown
 git clone https://github.com/Alcatraz2033/evil-link.git
-
 cd evil-link
-
 chmod +x evil-link.sh
-
 sudo ./evil-link.sh
-
 ```

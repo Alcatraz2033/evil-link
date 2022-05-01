@@ -43,12 +43,6 @@ function cheker(){
 		echo -e "\n${CYAN}[+] Instalando xclip...${endColour}"
 		sudo apt install xclip &>/dev/null
 	fi 
-	
-	which html2text &>/dev/null
-	if [ $? -ne "0" ];then
-		echo -e "\n${CYAN}[+] Instalando html2text...${endColour}"
-		sudo apt install html2text $>/dev/null
-	fi
 }
 
 if [ $(id -u) -ne "0" ];then

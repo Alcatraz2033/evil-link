@@ -15,6 +15,7 @@ Se le pueden agregar más parametros para hacerlo más creíble, estos bienen se
 Clonar el repositorio y cambiar los permisos
 
 ```markdown
+sudo apt install html2text
 git clone https://github.com/Alcatraz2033/evil-link.git
 cd evil-link
 chmod +x evil-link.sh

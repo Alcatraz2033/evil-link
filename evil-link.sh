@@ -41,7 +41,7 @@ function cheker(){
 	which xclip &>/dev/null
 	if [ $? -ne "0" ];then
 		echo -e "\n${CYAN}[+] Instalando xclip...${endColour}"
-		sudo apt install xclip &>/dev/null
+		sudo apt install xclip -y &>/dev/null
 	fi 
 }
 
